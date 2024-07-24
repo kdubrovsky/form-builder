@@ -1,0 +1,80 @@
+{
+  "id": "form0",
+  "name": "test-form",
+  "fields": [
+    {
+      "id": "firstname",
+      "type": "text",
+      "name": "firstName",
+      "label": "First name",
+      "placeholder": "Input first name"
+    },
+    {
+      "id": "lastname",
+      "type": "text",
+      "name": "lastName",
+      "label": "First name",
+      "placeholder": "Input last name",
+      "hiddenLabel": true
+    },
+    {
+      "id": "nomiddlename",
+      "type": "checkbox",
+      "name": "noMiddleName",
+      "label": "I don't have a middle name",
+      "defaultValue": true
+    },
+    {
+      "id": "middlename",
+      "type": "text",
+      "name": "middleName",
+      "label": "Middle Name",
+      "placeholder": "Input middle name"
+    },
+    {
+      "id": "contactdetails",
+      "type": "struct",
+      "name": "contactDetails",
+      "label": "Contact Details",
+      "count": 0,
+      "capacity": 5,
+      "struct": [
+        {
+          "id": "email",
+          "type": "text",
+          "name": "email",
+          "label": "E-Mail",
+          "placeholder": "Input e-mail",
+          "defaultValue": "@gmail.com"
+        },
+        {
+          "id": "phones",
+          "type": "struct",
+          "name": "phones",
+          "label": "Phone",
+          "count": 0,
+          "capacity": 5,
+          "struct": [
+            {
+              "id": "phone",
+              "type": "text",
+              "name": "phone",
+              "label": "Phone",
+              "placeholder": "Input phone",
+              "defaultValue": "+995",
+              "hiddenLabel": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "country",
+      "type": "text",
+      "name": "country",
+      "label": "Origin country",
+      "defaultValue": "Georgia",
+      "disabled": true
+    }
+  ]
+}
