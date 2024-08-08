@@ -1,0 +1,8 @@
+/node_modules
+/.vscode
+/.git
+/logs
+
+.DS_Store
+*.local
+*.log
