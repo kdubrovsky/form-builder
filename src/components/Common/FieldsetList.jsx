@@ -1,10 +1,10 @@
-import Field from '../Field/Field';
+import Field from './Field';
 
-export default function FieldSets({
+export default function FieldsetList({
   fieldsets,
   label,
   readOnly,
-  isEnabled,
+  enabled,
   parentId,
   removeChild,
 }) {
@@ -18,7 +18,7 @@ export default function FieldSets({
       ))}
       <button
         className='struct-button'
-        disabled={!isEnabled}
+        disabled={!enabled}
         onClick={e => {
           e.preventDefault();
           removeChild(parentId, i);

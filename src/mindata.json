@@ -7,7 +7,52 @@
       "type": "text",
       "name": "firstName",
       "label": "First name",
-      "placeholder": "Input first name"
+      "placeholder": "Input first name",
+      "validation": [
+        {
+          "type": "required",
+          "onChange": true,
+          "message": "Can not be empty"
+        },
+        {
+          "type": "regex",
+          "pattern": "^[A-ZА-ЯЁ]",
+          "onChange": true,
+          "message": "Should start with a capital letter"
+        }
+      ],
+      "rules": [
+        {
+          "id": "lastname",
+          "property": "visible",
+          "state": false,
+          "condition": {
+            "visible": true,
+            "enabled": true,
+            "values": ["off", "none"]
+          }
+        },
+        {
+          "id": "lastname",
+          "property": "enabled",
+          "state": false,
+          "condition": {
+            "visible": true,
+            "enabled": true,
+            "values": ["disable"]
+          }
+        },
+        {
+          "id": "country",
+          "property": "visible",
+          "state": false,
+          "condition": {
+            "visible": true,
+            "enabled": true,
+            "valid": false
+          }
+        }
+      ]
     },
     {
       "id": "lastname",
@@ -15,14 +60,38 @@
       "name": "lastName",
       "label": "First name",
       "placeholder": "Input last name",
-      "hiddenLabel": true
+      "hiddenLabel": true,
+      "rules": [
+        {
+          "id": "middlename",
+          "property": "enabled",
+          "state": false,
+          "condition": {
+            "visible": true,
+            "enabled": true,
+            "valid": true,
+            "values": ["1"]
+          }
+        }
+      ]
     },
     {
       "id": "nomiddlename",
       "type": "checkbox",
       "name": "noMiddleName",
       "label": "I don't have a middle name",
-      "defaultValue": true
+      "value": false,
+      "rules": [
+        {
+          "id": "middlename",
+          "property": "visible",
+          "state": false,
+          "condition": {
+            "visible": true,
+            "values": [true]
+          }
+        }
+      ]
     },
     {
       "id": "middlename",
@@ -45,7 +114,14 @@
           "name": "email",
           "label": "E-Mail",
           "placeholder": "Input e-mail",
-          "defaultValue": "@gmail.com"
+          "value": "@gmail.com",
+          "validation": [
+            {
+              "type": "regex",
+              "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$",
+              "message": "Please, enter valid email address"
+            }
+          ]
         },
         {
           "id": "phones",
@@ -61,7 +137,7 @@
               "name": "phone",
               "label": "Phone",
               "placeholder": "Input phone",
-              "defaultValue": "+995",
+              "value": "+995",
               "hiddenLabel": true
             }
           ]
@@ -73,8 +149,8 @@
       "type": "text",
       "name": "country",
       "label": "Origin country",
-      "defaultValue": "Georgia",
-      "disabled": true
+      "value": "Georgia",
+      "enabled": false
     }
   ]
 }

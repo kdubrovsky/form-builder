@@ -1,120 +1,129 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    background-color: #2c2c2c;
+  font-family: sans-serif;
+  background-color: #2c2c2c;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    max-width: 640px;
-    padding: 32px;
-    margin: 0 auto;
-    background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 640px;
+  padding: 32px;
+  margin: 0 auto;
+  background-color: #ededed;
 }
 
 input {
-    font-size: 14px;
-    accent-color: blue;
+  font-size: 14px;
+  accent-color: blue;
 }
 
 input::placeholder {
-    color: #bbb;
+  color: #bbb;
 }
 
 .struct p,
 label {
-    width: 100%;
-    font-size: 0.7em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  width: 100%;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .field {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 100%;
-    gap: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  gap: 6px;
 }
 
 .field.checkbox {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .struct p {
-    padding-bottom: 6px;
-    border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ccc;
 }
 
 .struct-button {
-    padding: 8px 16px;
-    margin-top: 8px;
+  padding: 8px 16px;
+  margin-top: 8px;
 }
 
 fieldset {
-    width: 100%;
-    margin-top: 24px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button[type='submit'] {
-    transition: 0.3s ease-out;
-    margin: 32px 8px 0;
-    padding: 16px 32px;
-    letter-spacing: 0.1em;
-    width: 100%;
-    text-transform: uppercase;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  transition: 0.3s ease-out;
+  margin: 32px 8px 0;
+  padding: 16px 32px;
+  letter-spacing: 0.1em;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button[type='submit']:hover {
-    transform: translateY(-1px);
-    background-color: #fafafa;
-    box-shadow: 0px 1px 20px #00000010;
+  transform: translateY(-1px);
+  background-color: #fafafa;
+  box-shadow: 0px 1px 20px #00000010;
 }
 
 input[type='text'] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 input:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 input:focus {
-    outline: none;
-    border-color: blue;
+  outline: none;
+  border-color: blue;
 }
 
 .visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+input[type='text'].invalid {
+  border-color: red;
+}
+
+.error-messages {
+  font-size: 12px;
+  color: red;
 }

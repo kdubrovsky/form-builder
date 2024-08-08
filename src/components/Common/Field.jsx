@@ -1,15 +1,16 @@
 import CheckboxField from '../Fields/Checkbox';
 import TextInput from '../Fields/TextInput';
+import Struct from './Struct';
 
 export default function Field({ field }) {
-  if (field.isVisible)
+  if (field.visible)
     switch (field.type) {
       case 'text':
         return <TextInput {...field} />;
       case 'checkbox':
         return <CheckboxField {...field} />;
       case 'struct':
-        return <StructField {...field} />;
+        return <Struct {...field} />;
       default:
         return null;
     }
